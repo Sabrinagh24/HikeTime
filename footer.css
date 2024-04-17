@@ -10,6 +10,7 @@
     color: white;
     height: 50vh;
     position: relative;
+    bottom: 0;
     justify-content: space-evenly;
     background-image: url("./images/wave\ \(3\).png");
     column-gap: 10vh;
