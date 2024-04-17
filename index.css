@@ -40,10 +40,9 @@ main {
 h3 {
     text-align:start;
     font-weight:bolder;
-    font-size: medium;
+    font-size: 1.3rem;
     padding-top: 2%;
     padding-left: 2%;
-
 }
 h3::after {
     content: "";
@@ -52,14 +51,14 @@ h3::after {
     background: #c2d373;
     display: block;
     transition: 0.7s;
-    border-radius-left: 20%;
+    border-radius: 20%;
 }
 #txt1:hover::after {
-    width: 5%;
+    width: 23%;
 
 }
 #txt2:hover::after {
-    width: 5%;
+    width: 18%;
 
 }
 .conteneur-slider {
@@ -95,7 +94,7 @@ h3::after {
     border-radius: 5vh;
 }
 .slider2 img:hover {
-    filter: drop-shadow(0vh 0vh 1vh #797676);
+    filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
 }
 
 .box a:hover {
