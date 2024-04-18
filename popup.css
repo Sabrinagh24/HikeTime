@@ -1,4 +1,4 @@
-.supprimer {
+.supprimerok {
     display: none; /* Hide pop-up by default */
     position: fixed; /* Position it relative to the browser window */
     top: 0;
@@ -8,7 +8,7 @@
     background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
     z-index: 9999; /* Ensure it appears on top of other content */
 }
-.supprimer-content{
+.supprimerok-content{
     background-color: #f3f3dc; /* White background for the pop-up */
     width: 100vh; /* Set maximum width */
     height: 30vh;
@@ -21,39 +21,24 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.confirmation{
+.supprimerok-content #logo{
     position: relative;
-    width: 40vh;
-    height: 6vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    margin-top: -15vh;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    
 }
-.confirmation #ok{
+.supprimerok-content #ok{
+    position: relative;
     border: none;
-    border-radius: 2lvh;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: 'Mulish', sans-serif;
-    font-size: large;
-    width: 18vh;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1lvh;
     background-color: #a7c42a;
-    transition: all 0.3s ease;
-}
-.confirmation #ok:hover{
-    background-color: #96af26;
-}
-.confirmation #annuler{
-    border: none;
-    border-radius: 2lvh;
-    cursor: pointer;
     color: #ffffff;
     font-family: 'Mulish', sans-serif;
-    font-size: large;
-    width: 18vh;
-    background-color: #f14c4c;
-    transition: all 0.3s ease;
-}
-.confirmation #annuler:hover{
-    background-color: #d23636;
+    font-size: medium;
+    cursor: pointer;
 }
