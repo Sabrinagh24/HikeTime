@@ -7,13 +7,11 @@
 </head>
 <body>
             <!-- boite de dialogue du message de suppression-->
-            <div id="supprimer" class="supprimer">
-                <div class="supprimer-content">
-                    <h2 id="h2">Êtes-vous sur de vouloir supprimer cette randonnée ?</h2>
-                    <div class="confirmation">
-                        <button id="ok">Confirmer</button>
-                        <button id="annuler" onclick="closeDeletePopup()">Annuler</button>
-                    </div>
+            <div id="supprimerok" class="supprimerok">
+                <div class="supprimerok-content">
+                    <img id="logo" src="./img/confirm-icon.svg" alt="confirmation icon">
+                    <h2 id="h2">La randonnée a été supprimer avec succès !</h2>
+                    <button id="ok" onclick="deleteItemOk()">Ok</button>
                 </div>
             </div>
 </body>
