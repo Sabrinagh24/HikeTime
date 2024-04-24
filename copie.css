@@ -1,6 +1,7 @@
 
-  
-    
+  *{
+    font-family: sans-serif !important;
+  }
  
   
   
@@ -11,7 +12,9 @@
     width: 100%;
     border-radius: 7px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 50px;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    margin-top: 2%;
    
     
 
@@ -27,18 +30,19 @@
   form h2 {
     font-size: 27px;
     text-align: center;
-    margin: 0px 0 30px;
+    margin: 0% 0 3%;
+    color: #fff;
   }
   
   form .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.5%;
     position: relative;
   }
   
   form label {
     display: block;
     font-size: 15px;
-    margin-bottom: 7px;
+    margin-bottom: 0.7%;
   }
   * {
     margin: 0;
@@ -77,12 +81,12 @@
   .try label,
 .try input,
 .try select {
-  margin-right: 10px; /* Espacement entre les champs */
+  margin-right: 1%; /* Espacement entre les champs */
 }
 
 form small {
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 0.5%;
   display: block;
   color: #f91919;
 }
@@ -104,7 +108,7 @@ form small {
   }
   
   .submit-btn {
-    margin-top: 15px;
+    margin-top: 1.5%;
   }
  
   
@@ -132,10 +136,40 @@ form small {
 
 label {
   font-weight: bold; /* Rend le texte en gras */
-  color: #000000; /* Change la couleur du texte */
-  margin-bottom: 5px; /* Ajoute de l'espace en bas du label */
+  color: #f6f5f5; /* Change la couleur du texte */
+  margin-bottom: 0.5%; /* Ajoute de l'espace en bas du label */
 }
 #errorMessage {
-  margin-top: 5px;
+  margin-top: 0.5%;
 }
+
+#boutonEnvoyer {
+  background-color: #4CAF50; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
+  border: none; /* Suppression du bord */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+  font-size: 16px; /* Taille de la police */
+  float: right ;/* le positionner a droite*/
+}
+
+/* Effet au survol */
+#boutonEnvoyer:hover {
+  background-color: #45a049;
+}
+.blurry-message {
+  font-size: 18px;
+  color: rgb(199, 32, 32);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+  
+    
+ 
+  
+  
+
+
 
