@@ -32,6 +32,7 @@ body {
 .part1{
     width: 40%;
     text-align: center;
+    padding-top: 10%;
 }
 .part1 h2 {
   padding-top: 3vh;
@@ -60,12 +61,14 @@ body {
   transform: translateX(-200%);
   margin-top: 35vh;
   background-color: #c2d373;
-  box-shadow: 0.5vh 0.5vh 1vh rgb(120, 120, 107);
 }
 #btn-upload img {
-  width: 6vh;
-  height: 6vh;
-  margin-top: 15%;
+  width: 5vh;
+  height: 5vh;
+  margin-top: 23%;
+}
+#btn-upload:hover {
+  background-color:#a5b463;
 }
 .part2 {
   width: 50%;
@@ -92,6 +95,7 @@ body {
   text-align: center;
   border: none;
   background-color: #fefedb;
+  outline: none;
 }
 .box label {
   width:60%;

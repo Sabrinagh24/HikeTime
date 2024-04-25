@@ -1,3 +1,4 @@
+//  de modifications de champs "information utilisateur"
 document.addEventListener("DOMContentLoaded", function() {
   const editButton = document.getElementById("editButton");
   const cancelButton = document.getElementById("cancelButton");
@@ -29,4 +30,26 @@ document.addEventListener("DOMContentLoaded", function() {
     editButton.textContent = "Modifier";
   });
 });
+// fonction de changement de photo de profil
+const imgDiv = document.querySelector('.img-user');
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadbtn = document.querySelector('#btn-upload');
+
+
+file.addEventListener('change' , function(){
+const fichierChoisi = this.files[0];
+if(fichierChoisi){
+  const lecteur = new FileReader();
+
+  lecteur.addEventListener('load' , function(){
+    img.setAttribute('src' , lecteur.result);
+  })
+lecteur.readAsDataURL(fichierChoisi);
+
+}
+})
+
+
+
 

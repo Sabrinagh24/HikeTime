@@ -1,6 +1,6 @@
 
 
-     unction verifierChamps() {
+     function verifierChamps() {
   var champsRemplis = true; // Variable pour suivre si tous les champs sont remplis
   var errorMessage = document.getElementById('errorMessage');
   errorMessage.innerHTML = ''; // Réinitialiser le contenu de la div des messages d'erreur
@@ -69,9 +69,9 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
   // Si tous les champs sont remplis, envoyer le formulaire
   if (champsValides) {
     this.submit(); // Envoyer le formulaire
-  } else {
+  } //else {
     // Afficher un message d'erreur ou effectuer d'autres actions
-    alert('Veuillez remplir tous les champs correctement!');
-  }
+    //alert('Veuillez remplir tous les champs correctement!');
+ // }
 });
 
