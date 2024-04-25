@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" onkeyup="h()" onchange="h()" step="any">
+    <form action="" >
+        <input type="password" id="p1">
+        <input type="password" id="p2" onblur="h()">
+        <button type="submit">send</button>
+
+    </form>
+    <script>
+        function h()
+        {
+            let pass1 = document.getElementById("p1").value;
+            console.log(pass1)
+            pass2 = document.getElementById("p2").value;
+            if (pass1 !== pass2)
+            {
+                console.log("incorrect")
+
+            }
+            else {
+                console.log('correct')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -12,7 +12,8 @@
     position: relative;
     bottom: 0;
     justify-content: space-evenly;
-    background-image: url("./images/wave\ \(3\).png");
+    background-image: url("./images/wave\ \(4\).png");
+    background-size: cover;
     column-gap: 10vh;
 }
 #footer-img {
@@ -27,21 +28,27 @@ span {
 .description {
     position: relative;
     height: fit-content;
-    top: 14vh;
+    top: 20vh;
     right: 20vh;
 }
 .pages {
     position: relative;
     height: fit-content;
-    top: 15vh;
+    top: 23vh;
 }
 .contact {
     position: relative;
     height: fit-content;
-    top: 15vh; 
+    top: 23vh; 
 }
 .contact h2, li {
-    border-bottom: 2vh solid transparent;
+    border-bottom: 1vh solid transparent;
+}
+.contact img {
+    width: 2,5vh;
+    height: 2.5vh;
+    position: relative;
+    top: 0.5vh;
 }
 .footer ul {
     list-style: none;
@@ -53,11 +60,10 @@ span {
     color: white;
 }
 .pages h2, li {
-    border-bottom: 2vh solid transparent; 
+    border-bottom: 1vh solid transparent; 
 }
 .pages li a:hover {
     color: #b9cc64;
-    transform: translateY(-3px) translateX(-5px);
 
 }
 i {

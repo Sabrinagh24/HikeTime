@@ -3,11 +3,12 @@ var slider = tns({
     items: 1,
     slideBy: 'page',
     autoplay: true,
-    mouseDrag: false,
+    mouseDrag: true,
     autoplayButtonOutput: false,
     controls: false,
     navPosition : "bottom",
-    nav: true
+    nav: true,
+    arrowKeys : true
 
   });
 var slider = tns({

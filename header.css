@@ -62,6 +62,7 @@ header svg {
     font-size: 0.8rem;
     border: none;
     text-align: center;
+    background-color: #fefedb;
 
 }
 #search-bar button{

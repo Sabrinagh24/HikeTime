@@ -9,18 +9,120 @@ body {
 .main {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+
 }
 .infos-user {
-    width: 100%;
-    background-color:blueviolet ;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 2vh;
+    background-color: #465403;
     display: flex;
     flex-direction: row;
-    height: 40vh;
+    height: 90vh;
+    color: azure;
 }
-.part1 {
-    display: flex;
-    flex-direction: column;
+.infos-user:hover{
+    filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
+}
+.part1{
+    width: 40%;
+    text-align: center;
+}
+.part1 h2 {
+  padding-top: 3vh;
+}
+.img-user {
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  margin: 10%;
+}
+#photo {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+}
+#file {
+  display: none;
+}
+#btn-upload {
+  position: absolute;
+  height: 10vh;
+  width:10vh;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #c2d373;
+  transform: translateX(-200%);
+  margin-top: 35vh;
+  background-color: #c2d373;
+  box-shadow: 0.5vh 0.5vh 1vh rgb(120, 120, 107);
+}
+#btn-upload img {
+  width: 6vh;
+  height: 6vh;
+  margin-top: 15%;
+}
+.part2 {
+  width: 50%;
+}
+#form-conteneur {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  width:100%;
+  height: 100%;
+  row-gap: 5vh;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.box input{
+  float: left;
+  width: 100%;
+  height: 7vh;
+  border-radius: 2vh;
+  text-align: center;
+  border: none;
+  background-color: #fefedb;
+}
+.box label {
+  width:60%;
+  font-weight: bold;
+}
+.box button {
+  float: right;
+}
+#editButton{
+  width: 20vh;
+  height: 6vh;
+  background-color:#c2d373;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  left: 25vh;
+
+}
+#cancelButton {
+  width: 30vh;
+  height: 6vh;
+  background-color:#c2d373;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#editButton:hover,
+#cancelButton:hover {
+  background-color:#a5b463;
 }

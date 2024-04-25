@@ -18,10 +18,11 @@ main {
     height: 80vh;
 }
 
-.slider img {
+.item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 15% 100%;
 }
 
 .item {
@@ -33,8 +34,22 @@ main {
     bottom: 20px;
     left: 20px; 
     color: #ffffff; 
-    z-index: 1;
     top :25vh;
+}
+.contenu button {
+    width: 20vh;
+    height: 6vh;
+    background-color:#c2d373;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 30vh;
+    left: 40vh;
+    font-weight: bold;
+}
+.contenu button:hover {
+    background-color:#a5b463;
 }
 
 h3 {
@@ -51,7 +66,6 @@ h3::after {
     background: #c2d373;
     display: block;
     transition: 0.7s;
-    border-radius: 20%;
 }
 #txt1:hover::after {
     width: 23%;
@@ -108,6 +122,20 @@ h3::after {
     background-color: #c2d373;
     cursor: pointer;
 }
+.next img {
+    width: 3vh;
+    height: 3vh; 
+    position: relative;
+    top: 0.3vh;
+    left: 0.2vh;
+}
+.previous img {
+    width: 3vh;
+    height: 3vh; 
+    position: relative;
+    top: 0.3vh;
+    right: 0.2vh;
+}
 .tns-nav {
     text-align: center;
 }
@@ -144,6 +172,7 @@ h3::after {
 .stars {
     list-style: none;
 }
-
-
-
+.stars img {
+    width: 3vh;
+    height: 3vh;
+}
