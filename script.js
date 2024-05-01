@@ -7,8 +7,7 @@ function openDeletePopup() {
   
 function closeDeletePopup() {
     document.getElementById("supprimer").style.display = "none";
-}
-  
+} 
 function deleteItem() {
     // Add your delete item functionality here
     document.getElementById("supprimerok").style.display = "block";

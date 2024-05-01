@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="profil.css">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -29,7 +30,7 @@
         </div>  
     </header>
     <main>
-        <h1>Informations profil :</h1>
+        <h1>Informations sur votre profil :</h1>
         <div class="infos-user">
             <div class="part1">
                 <h2>Photo de profil</h2>
@@ -42,26 +43,32 @@
             <div class="part2">
                 <div id="form-conteneur">
                     <div class="box"><label for="fname">Nom :</label>
-                        <input type="text" id="champ1" value="Valeur par défaut 1" disabled>
+                        <input type="text" id="nom" value="Valeur par défaut 1" disabled>
                     </div>
                     <div class="box"><label for="fname">Prénom :</label>
-                        <input type="text" id="champ2" value="Valeur par défaut 2" disabled>
+                        <input type="text" id="prenom" value="Valeur par défaut 2" disabled>
                     </div>
                     <div class="box">
                         <label for="fname">Date de naissance :</label>
-                    <input type="date" id="champ3" value="Valeur par défaut 3" disabled>
+                    <input type="date" id="date_naiss" value="Valeur par défaut 3" disabled>
                     </div>
                     <div class="box">
                         <label for="fname">Adresse E-mail :</label>
-                    <input type="email" id="champ4" value="Valeur par défaut 4" disabled>
+                        <div class="special-box">
+                            <input type="email" id="email" value="Valeur par défaut 4" disabled>
+                            <span class="error-message"></span>
+                        </div>
                     </div>
                     <div class="box">
                         <label for="fname">Numéro de téléphone :</label>
-                        <input type="tel" id="champ5" value="Valeur par défaut 5" disabled>
+                        <div class="special-box">
+                            <input type="tel" id="tel" value="Valeur par défaut 5" disabled>
+                        <span class="error-message"></span>
+                        </div>
                     </div>
                     <div class="box">
                         <label for="fname">Date d'inscription :</label>
-                        <input type="text" id="champ6" value="Valeur par défaut 6" readonly>
+                        <input type="text" id="date_ins" value="Valeur par défaut 6" disabled>
                     </div>
                     <div class="box">
                         <button id="editButton">Modifier</button>
@@ -71,11 +78,26 @@
         </div>
         </div>
         <div class="historique">
+            <h1>Historique de vos Réservations :</h1>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
 
         </div>
-        <div class="btns">
-
+        <div id="btns">
+            <button id="unsign-up" onclick="openDeletePopup()">Se désinscrire</button>
+            <button id="disconnect">Se déconnecter</button>
         </div>
+        <div id="unsign-up-btn" class="unsign-up-btn">
+            <div class="unsign-up-content">
+                <h2 id="h2">Êtes-vous sur de vouloir vous désinscrire ?</h2>
+                <div class="confirmation">
+                    <button id="ok" onclick="closeDeletePopup()">Confirmer</button>
+                    <button id="annuler" onclick="closeDeletePopup()">Annuler</button>
+                </div>
+            </div>
+         </div>
     </main>
     <footer class="footer">
         <div class="description">

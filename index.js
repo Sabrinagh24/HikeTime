@@ -1,3 +1,4 @@
+
 var slider = tns({
     container: '.slider',
     items: 1,

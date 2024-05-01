@@ -36,6 +36,12 @@ main {
     color: #ffffff; 
     top :25vh;
 }
+.contenu p {
+    width: 70vh; 
+    font-weight: bold;
+    position: relative;
+    top: 5vh;
+}
 .contenu button {
     width: 20vh;
     height: 6vh;
@@ -44,8 +50,8 @@ main {
     border: none;
     cursor: pointer;
     position: relative;
-    top: 30vh;
-    left: 40vh;
+    top: 17vh;
+    left: 23vh;
     font-weight: bold;
 }
 .contenu button:hover {
@@ -68,11 +74,11 @@ h3::after {
     transition: 0.7s;
 }
 #txt1:hover::after {
-    width: 23%;
+    width: 30%;
 
 }
 #txt2:hover::after {
-    width: 18%;
+    width: 25%;
 
 }
 .conteneur-slider {

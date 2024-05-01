@@ -1,6 +1,8 @@
-
   *{
     font-family: sans-serif !important;
+  }
+  body {
+    background-color:rgb(243, 243, 187);
   }
   form {
     padding: 25px;

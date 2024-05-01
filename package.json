@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "tiny-slider": "^2.9.4"
-  }
+  },
+  "name": "projet",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
