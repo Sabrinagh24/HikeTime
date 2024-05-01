@@ -1,20 +1,20 @@
 .supprimerok {
-    display: none; /* Hide pop-up by default */
-    position: fixed; /* Position it relative to the browser window */
+    display: none; /* cacher le pop-up par défaut */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
-    z-index: 9999; /* Ensure it appears on top of other content */
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 9999; /* assurer qu’il se positionne en premier-plan */
 }
 .supprimerok-content{
-    background-color: #f3f3dc; /* White background for the pop-up */
-    width: 100vh; /* Set maximum width */
+    background-color: #f3f3dc; /* couleur de la boite de dialogue */
+    width: 100vh;
     height: 30vh;
-    margin: 20% auto; /* Center the pop-up vertically and horizontally */
+    margin: 20% auto; /* centrer la boite de dialogue */
     border-radius: 2vh;
-    box-shadow: 0 0 1vh rgba(0,0,0,0.5); /* Add shadow effect */
+    box-shadow: 0 0 1vh rgba(0,0,0,0.5);
     position: relative;
     display: flex;
     flex-direction: column;
