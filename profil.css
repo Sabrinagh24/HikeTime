@@ -2,10 +2,14 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overscroll-behavior-y: none; 
+    touch-action: none; 
 }
+
 body {
     background-color:rgb(243, 243, 187);
 }
+/*le contenu principal de la page est un flexbox de plusieurs lignes*/
 .main {
     width: 100%;
     display: flex;
@@ -13,7 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 main h1 {
   position: relative;
@@ -22,6 +25,7 @@ main h1 {
   font-weight:bolder;
   padding-left: 2%;
 }
+/*mettre un style pour les titres h1*/
 main h1::after {
   content: "";
   width: 0%;
@@ -34,6 +38,7 @@ main h1:hover::after {
   width: 38%;
 
 }
+/*style relatif au div qui contient les informations d'un memebre*/
 .infos-user {
     width: 80%;
     margin-left: 10%;
@@ -43,11 +48,12 @@ main h1:hover::after {
     display: flex;
     flex-direction: row;
     height: 95vh;
-    color: azure;
+    color: #fbffff;
 }
 .infos-user:hover{
     filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
 }
+/*part1 est la partie qui contient la photo de profil du memebre*/
 .part1{
     width: 40%;
     text-align: center;
@@ -89,6 +95,7 @@ main h1:hover::after {
 #btn-upload:hover {
   background-color:#a5b463;
 }
+/*part2 contient les champs d'informations du membre (nom, pénom...)*/
 .part2 {
   width: 50%;
 }
@@ -100,6 +107,7 @@ main h1:hover::after {
   height: 100%;
   row-gap: 5vh;
 }
+/*chaque box contient un label et un champs de */
 .box {
   display: flex;
   flex-direction: row;
@@ -120,6 +128,7 @@ main h1:hover::after {
   width:60%;
   font-weight: bold;
 }
+/*special box est un conteneur special pour les champs a modifié et qui peuvent génerer des erreurs*/
 .special-box {
   display: flex;
   flex-direction: column;
@@ -142,6 +151,7 @@ main h1:hover::after {
 .box button {
   float: right;
 }
+/*bouttons de modification de l'email et du numéro de téléphone d'un membre*/
 #editButton{
   width: 20vh;
   height: 6vh;
@@ -152,7 +162,6 @@ main h1:hover::after {
   font-weight: bold;
   position: relative;
   left: 25vh;
-
 }
 #cancelButton {
   width: 30vh;
@@ -163,15 +172,15 @@ main h1:hover::after {
   cursor: pointer;
   font-weight: bold;
 }
-
 #editButton:hover,
 #cancelButton:hover {
   background-color:#a5b463;
 }
-
+/*l'historique des réservations déja effectuées*/
 .historique {
   height: 40vh;
 }
+/*les bouttons de déconnextion et inscription*/
 #btns {
   display: flex;
   justify-content:flex-end;
@@ -192,6 +201,7 @@ main h1:hover::after {
 #disconnect:hover {
   background-color:#a5b463;
 }
+/*style relatif a la boite de dialogue*/
 .unsign-up-btn {
   display: none; 
   position: fixed;
@@ -251,4 +261,3 @@ main h1:hover::after {
 .confirmation #annuler:hover{
   background-color: #d23636;
 }
-
