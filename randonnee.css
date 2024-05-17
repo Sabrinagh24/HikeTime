@@ -1,0 +1,286 @@
+body {
+    background-color:rgb(243, 243, 187);
+    overscroll-behavior: none;
+    touch-action: none;
+}
+.rando-space{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
+}
+.rando{
+    height: 60vh;
+    width: 60%;
+    background-image:url(images/thala-guilef.webp) ;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 3%;
+}
+.presentation-rando{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2%;
+}
+.info-res{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.button{
+    height: 7vh;
+    width: 9vw;
+    background-color:#C2D373;
+    border:none;    
+    cursor: pointer;
+    border-radius: 15px;
+}
+.button:hover{
+    background-color: #a5b463;
+}
+#form-res{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    height: 70vh;
+    width: 60vw;
+    top: 10vh;
+    left: 19vw;
+}
+.form{
+    background: #899652;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2vh;
+}
+/*contenue par defaut*/
+.form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30% ;
+    width: 100%;
+    /*margin-left: 1%;*/
+    margin-bottom: 2%;
+}
+.content-name, .content-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 10% ;
+    width: 100%;
+}
+.form-content input{
+    height: 5vh;
+    border:none; 
+    border-radius: 2vh;
+    background-color:#fefedb;
+    padding-left: 2%;
+    outline: none;
+}
+.form-content label{
+    color: white;
+    margin-left: 2%;
+}
+/*plus de randonneurs?*/
+.ajout{
+    display: flex;
+    flex-direction: column;
+    height: 20% ;
+    width: 100%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.ajout span{
+    color: white;
+    font-size: medium;
+}
+.ajout label{
+    color: white;
+    margin-left: 2%;
+}
+input[type='radio'] {
+    accent-color: #C2D373;
+}
+/*other randonneurs*/
+.ajout-rando{
+    display: flex;
+    flex-direction: column;
+    height: 35% ;
+    width: 100%;
+    margin-left: 1%;
+}
+.ajout-rando label{
+    color: white;
+    margin-left: 2%;
+}
+.ajout-rando input{
+    height: 5vh;
+    width: 30%;
+    margin-top: 1.5%;
+    border:none; 
+    border-radius: 2vh;
+    background-color:#fefedb;
+    padding-left: 2%;
+    outline: none;
+}
+/*bouton*/
+.bouton{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+.bouton button{
+    height: 7vh;
+    width: 9vw;
+    background-color:#C2D373;
+    border:none;    
+    cursor: pointer;
+    border-radius: 15px;
+}
+.bouton button a{
+    text-decoration: none;
+    color: black;
+}
+.bouton button:hover{
+      background-color: #a5b463;
+}
+.space{
+    height: 2vh;
+}
+/*details rando*/
+.plus-details{
+    height: 80vh;
+    width:90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2%;
+    background-color: #899652;
+    color: azure;
+    filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
+}
+
+.details{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.circuit{
+    background-color: #000000;
+    height: 50%;
+    width: 35%;
+    margin-right:3% ;
+    margin-top: 2%;
+    border-radius: 2%;
+}
+/*titre*/
+h2 {
+    text-align:start;
+    font-weight:bolder;
+    font-size: 1.3rem;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+h2::after {
+    content: "";
+    width: 0%;
+    height: 1vh;
+    background: #c2d373;
+    display: block;
+    transition: 0.7s;
+}
+#txt:hover::after {
+    width: 9%;
+
+}
+/*slide*/ 
+.slider-conteneur {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 3%;
+
+}
+.slider-conteneur button {
+    position: relative;
+    top: 40%;
+}
+.slider {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+
+}
+#tns2-ow {
+    width: 70%;
+}
+.box {
+    height: 50vh;
+    border-radius: 5%;
+    text-align: center;
+}
+.slider div img {
+    height: 50vh;
+    width: 85%;
+    border-radius: 2vh;
+}
+.slider img:hover {
+    filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
+}
+
+.box a:hover {
+    color:#000000;
+}
+.previous, .next {
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    border-radius: 50%;
+    background-color: #c2d373;
+    cursor: pointer;
+}
+.next img {
+    width: 3vh;
+    height: 3vh; 
+    position: relative;
+    top: 0.3vh;
+    left: 0.2vh;
+}
+.previous img {
+    width: 3vh;
+    height: 3vh; 
+    position: relative;
+    top: 0.3vh;
+    right: 0.2vh;
+}
+.tns-nav {
+    text-align: center;
+}
+.tns-nav button {
+    border: none;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    margin: 0.5vh;
+    background-color: #c2d373;
+}
+.tns-nav .tns-nav-active {
+    background-color: rgb(192, 186, 186);
+}

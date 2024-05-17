@@ -4,4 +4,4 @@ function openDeletePopup() {
   
 function closeDeletePopup() {
     document.getElementById("supprimer").style.display = "none";
-}
+} //mettre dans le button qui ferme la boite de dialogue//

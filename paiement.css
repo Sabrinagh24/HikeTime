@@ -1,0 +1,141 @@
+body {
+    background-color:rgb(243, 243, 187);
+}
+/*espace pour la structure*/
+.espace-form{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    flex-direction: column;
+    align-items: center;
+}
+/*formulaire aesthetic*/
+.form{
+    background: #899652;
+    border-radius: 2vh;
+    height: 90vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form label{
+    color: white;
+}
+.form input{
+    height: 7vh;
+    margin-top: 1.5%;
+    border:none; 
+    border-radius: 2vh;
+    background-color:#fefedb;
+    padding-left: 2%;
+    outline:none;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+/*formulaire aesthetic contenue*/
+.form-content-name{
+    height: 20%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-content-num{
+    height: 20%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-date-expire{
+    height: 20%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-content-code{
+    height: 20%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-content-price{
+    height: 20%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%
+}
+.bouton button {
+    height: 7vh;
+    width: 9vw;
+    background-color:#C2D373;
+    border:none;    
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.bouton button a{
+    text-decoration: none;
+    color: black;
+}
+.bouton button:hover{
+      background-color: #a5b463;
+}
+
+/*pop-up*/
+.valider {
+    display: none; /* cacher le pop-up par défaut */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 9999; /* assurer qu’il se positionne en premier-plan */
+}
+.valider-content{
+    background-color: #f3f3dc;
+    width: 80vh;
+    height: 45vh;
+    margin: 20% auto; 
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.valider-content #logo{
+    position: relative;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    margin-top: -15vh;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    
+}
+.valider-content #ok{
+    position: relative;
+    border: none;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1lvh;
+    background-color:#C2D373;
+    color: black;
+    font-family: 'Mulish', sans-serif;
+    font-size: medium;
+    cursor: pointer;
+}
