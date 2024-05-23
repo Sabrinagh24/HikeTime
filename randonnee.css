@@ -32,6 +32,10 @@ body {
     margin-top: 2%;
     height: 70%;
     font-weight: bold;
+    padding-left: 2%;
+}
+.presentation-rando span{
+    padding-top: 2%;
 }
 .info-res{
     width: 50%;
@@ -237,7 +241,7 @@ h2::after {
     transition: 0.7s;
 }
 #txt:hover::after {
-    width: 9%;
+    width: 10.5%;
 }
 
 /*slide*/ 
@@ -319,7 +323,7 @@ h2::after {
 /*avis*/
 
 #txt1:hover::after {
-    width: 14%;
+    width: 16%;
 }
 .conteneur-avis{
     height: 80vh;
