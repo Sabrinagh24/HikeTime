@@ -10,13 +10,21 @@ function closeDeletePopup() {
 //plus details
 document.addEventListener('DOMContentLoaded', function() {
   var scrollToDetails = document.getElementById('scrollToDetails');
-  var details = document.getElementById('details');
 
   scrollToDetails.addEventListener('click', function(event) {
     event.preventDefault();
-    details.scrollIntoView({ behavior: 'smooth' });
+    
+    // Define the amount to scroll
+    var scrollAmount = 500;
+
+    // Scroll by the specified amount with smooth behavior
+    window.scrollBy({ 
+      top: scrollAmount, 
+      behavior: 'smooth' 
+    });
   });
 });
+
 //ajouter randonneurs 
 document.addEventListener('DOMContentLoaded', function() {
   var ouiRadio = document.getElementById('oui');
