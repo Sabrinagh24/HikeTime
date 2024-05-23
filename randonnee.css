@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-VariableFont_wght.ttf') format('truetype'); 
+}
 body {
     background-color:rgb(243, 243, 187);
     overscroll-behavior: none;
@@ -21,7 +25,7 @@ body {
     border-radius: 3%;
 }
 .presentation-rando{
-    color:azure;
+    color:#fbffff;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -36,7 +40,7 @@ body {
     justify-content: space-evenly;
 }
 .info-res p{
-    color: azure;
+    color: #fbffff;
     margin-top: 3%;
     font-size: large;
     font-weight: bold;
@@ -45,8 +49,8 @@ body {
     cursor: pointer;
 }
 .button{
-    height: 7vh;
-    width: 9vw;
+    height: 6vh;
+    width: 20vh;
     background-color:#C2D373;
     border:none;    
     cursor: pointer;
@@ -91,9 +95,6 @@ body {
     height: 10% ;
     width: 100%;
 }
-.content-contact{
-    justify-content: space-evenly;
-}
 .form-content input{
     height: 5vh;
     border:none;         
@@ -102,9 +103,18 @@ body {
     padding-left: 2%;
     outline: none;
 }
+.form-content-name{
+    margin-right: 2%;
+}
 .form-content label{
     color: white;
     margin-left: 2%;
+}
+.form-content-tel{
+    margin-left: 2%;
+}
+.form-content-mail{
+    margin-right: 3.5%;
 }
 /*plus de randonneurs?*/
 .ajout{
@@ -160,12 +170,13 @@ input[type='radio'] {
     border-radius: 15px;
 }
 .bouton button{
-    height: 7vh;
-    width: 9vw;
+    height: 6vh;
+    width: 20vh;
     background-color:#C2D373;
     border:none;    
     cursor: pointer;
     border-radius: 15px;
+    font-weight: bold;
 }
 .bouton button a{
     text-decoration: none;
@@ -186,7 +197,7 @@ input[type='radio'] {
     flex-direction: row;
     border-radius: 2%;
     background-color: #899652;
-    color: azure;
+    color: #fbffff;
     filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
 }
 
@@ -228,9 +239,7 @@ h2::after {
 #txt:hover::after {
     width: 9%;
 }
-#txt1:hover::after {
-    width: 14%;
-}
+
 /*slide*/ 
 .slider-conteneur {
     display: flex;
@@ -308,7 +317,11 @@ h2::after {
     background-color: rgb(192, 186, 186);
 }
 /*avis*/
-.avis-space{
+
+#txt1:hover::after {
+    width: 14%;
+}
+.conteneur-avis{
     height: 80vh;
     width: 100%;
     display: flex;
@@ -317,16 +330,17 @@ h2::after {
     align-items: center;
     filter: drop-shadow(0vh 0.2vh 0.5vh #797676);
 }
+
 .avis {
-    height: 65vh;
-    width:60%;
+    height: 60vh;
+    width:50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-radius: 2%;
     background-color: #899652;
-    color: azure;
+    color: #fbffff;
 }
 .form-avis{
     height: 65%;
@@ -342,7 +356,7 @@ h2::after {
 .rating .star {
 	cursor: pointer;
     font-size: 5vh;
-    color: rgb(241, 241, 64);
+    color: #C2D373;
 }
 .rating .star.active {
 	opacity: 0;
@@ -387,8 +401,8 @@ textarea {
     justify-content: space-evenly;
 }
 .btn-group button {
-    height: 7vh;
-    width: 9vw;
+    height: 6vh;
+    width: 20vh;
     background-color:#C2D373;
     border:none;    
     cursor: pointer;
