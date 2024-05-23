@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap"rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
 </head>
 <body>
@@ -36,7 +37,7 @@
         </header>
         <!--intro rando-->
         <div class="rando-space">
-        <div class="rando">
+         <div class="rando">
             <div class="presentation-rando">
                 <h1>Thala Guilef</h1>
                 <p>randonnee en hauteur mmm l'air, je suis nul pour les phrase daccroche tadala help 
@@ -44,7 +45,7 @@
                 </p>
             </div>
             <div class="info-res">
-                <p>plus de details</p>
+                <p id="scrollToDetails">plus de details</p>
                 <p>prix</p>
                 <button class="button" type="submit" onclick="openDeletePopup()">Reserver</button>
                 <div id="form-res">
@@ -54,34 +55,34 @@
                       <div class="form-content">
                         <div class="content-name">
                         <div class="form-content-name">
-                            <label for="name">nom</label>
+                            <label for="name">Nom</label>
                             <input type="text" placeholder="par defaut" id="nom">
                         </div>
                         <div class="form-content-surname">
-                            <label for="surname">prenom</label>
+                            <label for="surname">Prenom</label>
                             <input type="text" placeholder="par defaut" id="prenom">
                         </div>
                       </div>
                       <div class="content-contact">
                         <div class="form-content-tel">
-                            <label for="tel">telephone</label>
+                            <label for="tel">Telephone</label>
                             <input type="tel" placeholder="par defaut" id="tel">
                         </div>
                         <div class="form-content-mail">
-                            <label for="mail">mail</label>
-                            <input type="text" placeholder="par defaut" id="mail">
+                            <label for="tel">E-mail</label>
+                            <input type="email" placeholder="par defaut" id="mail">
                         </div>
                      </div>
                      </div>
                      <div class="ajout">
                       <span>Voulez-vous ajouter d'autres randonneurs ?</span>
                       <label for="">Oui</label>
-                      <input type="radio" name="button-radio" id="">
+                      <input type="radio" name="button-radio" id="oui">
                       <label for="" >Non</label>
-                      <input type="radio" name="button-radio">
+                      <input type="radio" name="button-radio" id="non">
                      </div>
                      <div class="ajout-rando">
-                      <label for="">Name et prenom</label>
+                      <label for="">Nom et prenom (3 maximum)</label>
                       <input type="text" placeholder="nom et prenom" disabled>
                       <input type="text" placeholder="nom et prenom" disabled>
                       <input type="text" placeholder="nom et prenom" disabled>
@@ -95,35 +96,28 @@
                     </form>
                 </div>
             </div>
-        </div>   
+        </div> 
         </div>
-        <!--plus de details-->
-        <div class="space "></div>
-        <div class="plus-details">
+        <!-- plus de details-->
+        <div class="space " id="details"></div>
+        <div class="plus-details" >
           <div class="details">
             <h2>Date :</h2>
             <h2>Heure :</h2> 
             <h2>Distance :</h2> 
-            <h2>lieu de depart :</h2>
-            <h2>lieu d'arrivé :</h2> 
-            <h2>niveau de difficulté :</h2> 
-            <h2>age minimum requis :</h2> 
-            <h2>age maximum requis :</h2>
+            <h2>Lieu de depart :</h2>
+            <h2>Lieu d'arrivé :</h2> 
+            <h2>Niveau de difficulté :</h2> 
+            <h2>Age minimum requis :</h2> 
+            <h2>Age maximum requis :</h2>
+            <h2>Guide :</h2>
            </div>
            <div class="circuit">
-             <img src="" alt="">
+             <img src="images/circuit-thalaguilef.webp" alt="">
            </div>
         </div>
         <div class="space "></div>
         <!-- slide photo -->
-          <!--<div class="slider">
-            <div class="slide-img">
-                <img src="images/thalaguilef1.webp" alt="">
-                <img src="images/thalaguilef2.webp" alt="">
-                <img src="images/thalaguilef3.webp" alt="">
-                <img src="images/thalaguilef4.webp" alt="">
-            </div>
-          </div>-->
           <h2 id="txt">Plus d'images</h2>
           <div class="slider-conteneur">
           <div>
@@ -144,7 +138,27 @@
     </div>
 </div>
         <!--avis-->
-        <div class="avis"></div>
+        <h2 id="txt1">Laissez nous un avis !</h2>
+        <div class="avis-space">
+        <div class="avis">
+         <form class="form-avis" action="#" method="post">
+             <div class="rating">
+                 <input type="number" name="rating" hidden>
+                 <i class='bx bx-star star' style="--i: 0;"></i>
+                 <i class='bx bx-star star' style="--i: 1;"></i>
+                 <i class='bx bx-star star' style="--i: 2;"></i>
+                 <i class='bx bx-star star' style="--i: 3;"></i>
+                 <i class='bx bx-star star' style="--i: 4;"></i>
+             </div>
+             <textarea name="opinion" cols="30" rows="5" placeholder="Votre avis..."></textarea>
+                <div class="btn-group">
+                    <button type="submit" class="btn valider">Valider</button>
+                    <button type="reset" class="btn annuler">Annuler</button>
+                </div>
+            </form>
+        </div>
+        </div>
+      
         <footer class="footer">
             <div class="description">
                 <h1><img src="./images/logo.svg" id="footer-img"> <span>HikeTime</span></h1>
