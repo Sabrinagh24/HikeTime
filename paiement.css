@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-VariableFont_wght.ttf') format('truetype'); 
+}
 body {
     background-color:rgb(243, 243, 187);
 }
@@ -78,8 +82,8 @@ body {
     margin-bottom: 2%
 }
 .bouton button {
-    height: 7vh;
-    width: 9vw;
+    height: 6vh;
+    width: 20vh;
     background-color:#C2D373;
     border:none;    
     cursor: pointer;
@@ -126,16 +130,4 @@ body {
     margin-top: -15vh;
     box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
     
-}
-.valider-content #ok{
-    position: relative;
-    border: none;
-    width: 20vh;
-    height: 5vh;
-    border-radius: 1lvh;
-    background-color:#C2D373;
-    color: black;
-    font-family: 'Mulish', sans-serif;
-    font-size: medium;
-    cursor: pointer;
 }
