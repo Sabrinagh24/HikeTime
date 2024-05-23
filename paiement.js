@@ -36,27 +36,19 @@ formPaiement.addEventListener("input", gererBoutonValider);
 
 // Appel init pour vérifier l'état des champs
 gererBoutonValider();
+  
+//pop-up
+function openPopup(displayTime) {
+    var popup = document.getElementById("valider");
+    popup.style.display = "block";
+
+    // Masquer le pop-up après displayTime millisecondes
+    setTimeout(function() {
+        popup.style.display = "none";
+    }, displayTime);
+}
 
 
 
-
-
-
-// eviter page refresh
-// Sélection du formulaire
-/*const formPaiement = document.forms["paiement"];
-
-// Événement de soumission du formulaire
-formPaiement.addEventListener("submit", function(event) {
-    // Empêcher le comportement par défaut de soumission du formulaire
-    event.preventDefault();*/
-    
-    //pop-up
-function openPopup() {
-    document.getElementById("valider").style.display = "block";
-} //mettre dans le button qui ouvre la boite de dialogue//
-function closePopup() {
-    document.getElementById("valider").style.display = "none";
-} //mettre dans le button qui ferme la boite de dialogue//
-   
+  
 //});
