@@ -148,7 +148,7 @@
 </body>
 </html>
 <?php
-$bdd = new PDO('mysql:host=localhost;bdname=hiketime;', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;bdname=hiketime;', 'root', '');
 
     $nomRand = $_POST['nomrand'];
     $description = $_POST['description'];
