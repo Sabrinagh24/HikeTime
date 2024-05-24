@@ -165,7 +165,7 @@ $bdd = new PDO('mysql:host=localhost;bdname=hiketime;', 'root', '');
     $nomGuide = $_POST['nomguide'];
     $prenomGuide = $_POST['prenomguide'];
     
-    $sql = "INSERT INTO randonnée (nomRand, description, prixRand, dateRand, heureRand, nivDiff, lieuDep, lieuArr, distanceRand, nbrPersonnes, ageminRand, agemaxRand, nomGuide, prenomGuide) VALUES ('$nomRand', '$description', '$prixRand', '$dateRand', '$heureRand', '$nivDiff', '$lieuDep', '$lieuArr', '$distanceRand', '$nbrPersonnes', '$ageminRand', '$agemaxRand', '$nomGuide', '$prenomGuide')";
+    $sql = "INSERT INTO randonnée (nomRand, descRand, prixRand, dateRand, heureRand, nivDiff, lieuDep, lieuArr, distanceRand, nbrPersonnes, ageminRand, agemaxRand, nomGuide, prenomGuide) VALUES ('$nomRand', '$description', '$prixRand', '$dateRand', '$heureRand', '$nivDiff', '$lieuDep', '$lieuArr', '$distanceRand', '$nbrPersonnes', '$ageminRand', '$agemaxRand', '$nomGuide', '$prenomGuide')";
     
 
     if ($bdd->query($sql) === TRUE) {
