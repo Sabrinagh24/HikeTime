@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-VariableFont_wght.ttf') format('truetype'); 
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-color: #FDF7E3;
+    font-family: 'Mulish', sans-serif; 
+}
+.conteneur {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300vh;
+    justify-content: space-between;
+}
+
+.main {
+    width: 100%;
+    height: 250vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*background-color: #f02e2e;*/
+}
+.ajout{
+    position: relative;
+    border: none;
+    width: 60vh;
+    height: 9vh;
+    align-self: center;
+    text-align: center;
+    border-radius: 2vh;
+    background-color: #adbd67;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.ajout:hover{
+    background: #a5b463;
+}
+.ajout i{
+    margin-right: 2vh;
+}
+.hikes{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*background-color: rebeccapurple;*/
+}
+.hike1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 2vh;
+    width: 80vh;
+    /*background-color: #2f3802;*/
+    background-image: url('./AzruNThor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    color: #f2fefe;
+    text-align: center;
+}
+.hike2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 2vh;
+    width: 80vh;
+    background-image: url('./thalaguilef.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    color: #f2fefe;
+    text-align: center;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 6vh;
+}
+#bp{
+    position: relative;
+    border: none;
+    width: 40vh;
+    border-radius: 15px;
+    background-color: #C2D373;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.5);
+    font-family: 'Mulish', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#bp:hover{
+    background: #afbe68;
+    color: #dbdbdb;
+}
+#sm{
+    width: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#delete{
+    justify-content: center;
+    border: none;
+    width: 8vh;
+    border-radius: 15px;
+    background-color: #dd3c3c;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#delete:hover{
+    background: #d23636;
+}
+#edit{
+    position: relative;
+    border: none;
+    width: 8vh;
+    border-radius: 15px;
+    background-color: #b4b4b4;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#edit:hover{
+    background: #969696;
+}
+.oldhikes a{
+    font-size: large;
+    font-weight: bold;
+    color: #2f3802;
+}
+#h1{
+    position: relative;
+    text-align: center;
+    font-weight:bolder;
+    cursor: default;
+}
+#h{
+    position: relative;
+    margin-left: 5%;
+    font-weight:bolder;
+    cursor: default;
+}
+#h::after {
+    content: "";
+    width: 0%;
+    height: 1vh;
+    background: #c2d373;
+    display: block;
+    transition: 0.3s;
+    
+}
+#h:hover::after {
+    width: 37%;
+}
+
+.list{
+    position: relative;
+    justify-content: space-between
+}
+.list a{
+    position: relative;
+    display: block;
+    padding: 4vh;
+    text-decoration: none;
+}
+.list a:hover{
+    text-decoration: underline;
+}
+#more{
+    position: absolute;
+    right: 6vh;
+    text-decoration: underline;
+}
+#more:hover{
+    color: #222901;
+}
+::-webkit-scrollbar {
+    width: 2.5vh;
+    border-radius: 2vh;
+    margin-block: 4vh;
+}
+::-webkit-scrollbar-track{
+    background-color: #e0e0af;
+    box-shadow: #cbcbaa;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #a5a578;
+    border: .5vh solid #e0e0af;
+    border-radius: 2vh;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #9ba75e;
+}
+.supprimer {
+    display: none; /* cacher le pop-up par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999; /* assurer qu’il s’affiche en premier plan */
+}
+.supprimer-content{
+    background-color: #f3f3dc; /* couleur du pop-up */
+    width: 100vh;
+    height: 30vh;
+    margin: 20% auto; /* centrer le pop-up */
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.confirmation{
+    position: relative;
+    width: 40vh;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.confirmation #ok{
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    width: 18vh;
+    background-color: #a7c42a;
+    transition: all 0.3s ease;
+}
+.confirmation #ok:hover{
+    background-color: #96af26;
+}
+.confirmation #annuler{
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    width: 18vh;
+    background-color: #dd3c3c;
+    transition: all 0.3s ease;
+}
+.confirmation #annuler:hover{
+    background-color: #d23636;
+}
+.supprimerok{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+.supprimerok-content{
+    background-color: #f3f3dc;
+    width: 80vh;
+    height: 45vh;
+    margin: 20% auto; 
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.supprimerok-content #logo{
+    position: relative;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    margin-top: -15vh;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    
+}
+.supprimerok-content #ok{
+    position: relative;
+    border: none;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1lvh;
+    background-color: #a7c42a;
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: medium;
+    cursor: pointer;
+}
+.main .ajout a{
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b1b19;
+    font-size: x-large;
+}

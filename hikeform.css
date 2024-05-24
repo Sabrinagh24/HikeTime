@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-VariableFont_wght.ttf') format('truetype'); 
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overscroll-behavior-y: none;
+    touch-action: none;
+}
+body {
+    background-color: #FDF7E3;
+    font-family: 'Mulish', sans-serif; 
+}
+.conteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ajouter{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 250vh;
+    margin-inline: auto;
+    margin-bottom: 10%;
+    align-items: center;
+    padding-inline: 4vh ;
+    margin-block: 15vh;
+    border-radius: 2vh;
+    background-color: #899652;
+    color: #fbffff;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.5);
+}
+.descriptions{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    border-radius: 2vh;
+    color: #fbffff;
+    background-color: #465403;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+}
+.champs{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fbffff;
+    align-items: center;
+}
+.champs2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #282827;
+}
+#input{
+    position: relative;
+    text-align: center;
+    width: 50vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 2vh;
+    margin-block: 2vh;
+    font-family: 'Mulish', sans-serif;
+    background-color: #fefedb;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+}
+textarea {
+    resize: none; /* Empêche le redimensionnement manuel */
+    overflow: hidden; /* Cache le défilement vertical */
+    outline: none;
+    width: 46vh; /* Largeur maximale */
+    border-radius: 2vh;
+    text-align: center;
+    padding-block: 1vh;
+    padding-inline: 2vh;
+    margin-block: 2vh;
+    font-family: 'Mulish', sans-serif;
+    background-color: #fefedb;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+}
+.img-conteneur, .img-conteneur2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    border-radius: 2vh;
+    background-color: #fefedb;
+    overflow: hidden;
+    color: #1b1b19;
+    margin-top: 2vh;
+}
+.img-conteneur .icon, .img-conteneur2 .icon{
+    color: #2f3802;
+    margin-top: 4vh;
+}
+.img-conteneur img, .img-conteneur2 img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 1;
+}
+.btn1, .btn2{
+    position: relative;
+    border: none;
+    width: 40vh;
+    height: 4vh;
+    border-radius: 15px;
+    margin-top: 2vh;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #1b1b19;
+    padding-top: 2%;
+    background-color: #C2D373;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+#btn{
+    position: relative;
+    border: none;
+    width: 20vh;
+    height: 15vh;
+    left: 5vh;
+    border-radius: 15px;
+    margin-block: 2vh;
+    background-color: #fefedb;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.parcours .champs2 #btn{
+    left: 6vh;
+}
+.pictures #btn{
+    height: 10vh;
+    left: 6vh;
+    align-content: center;
+    text-align: center;
+}
+.more{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    height: 90vh;
+}
+.details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 2vh;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #465403;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);
+}
+.info{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+#input2{
+    position: relative;
+    text-align: center;
+    width: 20vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 2vh;
+    margin-block: 2vh;
+    font-family: 'Mulish', sans-serif;
+    background-color: #fefedb;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.1);
+}
+.parcours{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+.pictures{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    border-radius: 2vh;
+    color: azure;
+    /*background-color: #2f3802;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.2);*/
+}
+.picturesp1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.boutons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.boutons button{
+    width: 25vh;
+    height: 6vh;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #C2D373;
+}
+.boutons button:hover{
+    background-color: #a5b463;
+}
+
+.boutons a{
+    text-decoration: none;
+    color: #1b1b19;
+}
+#result{
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    height: 20vh;
+}
+.thumbnail{
+    height: 20vh;
+}
