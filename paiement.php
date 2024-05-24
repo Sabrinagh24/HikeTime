@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-content-num">
                         <label for="num-card">numero de la carte</label>
-                        <input type="number" placeholder="numero carte á 16 chiffres" id="num-card" maxlength="16" required>
+                        <input type="text"  placeholder="numero carte á 16 chiffres" id="num-card" maxlength="16" required name="numero">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-date-expire">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-content-code">
                         <label for="code-card">code de la carte</label>
-                        <input type="number" placeholder="code carte á 3 chiffres" id="code-card" maxlength="3" required>
+                        <input type="text"  placeholder="code carte á 3 chiffres" id="code-card" maxlength="3" required name="code">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-content-price">
@@ -66,7 +66,7 @@
                 </div>
                  <!--boutons-->
                  <div class="bouton">
-                    <button type="submit" name="valider-paiement" onclick="openPopup(15000)" disabled>Valider</button>
+                    <button type="submit" name="valider-paiement" onclick="openPopup(30000)" disabled>Valider</button>
                     <button><a href="randonnee.html">Annuler</a></button>
                  </div>
                 </form>
@@ -80,3 +80,24 @@
     <script src="paiement.js"></script>
 </body>
 </html>
+<?php
+ require 'vendor/autoload.php';
+ use Ramsey\Uuid\Uuid;
+ $bdd = new PDO('mysql:host=localhost;bdname=hiketime;', 'root', '');
+ $uuid = Uuid::uuid4()->toString();
+    $nomtitulaireCarte = $_POST['name'];
+    $numCarte = $_POST['numero'];
+    $codeCarte = $_POST['code'];
+    
+    $sql = "INSERT INTO paiement (idPaiement, nomtitulaireCarte, numCarte, codeCarte) VALUES ('$uuid','$nomtitulaireCarte', '$numCarte', '$codeCarte'')";
+    
+    
+    
+    if ($bdd->query($sql) === TRUE) {
+        echo "Enregistrement de la randonnée réussi.";
+    } else {
+        echo "Erreur lors de l'enregistrement de la randonnée : " . $bdd->error;
+    }
+
+
+?>
