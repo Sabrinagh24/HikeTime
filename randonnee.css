@@ -211,6 +211,9 @@ input[type='radio'] {
     display: flex;
     flex-direction: column;
 }
+.details span{
+    color: #000000;
+}
 .circuit{
     background-color: #000000;
     height: 50%;
