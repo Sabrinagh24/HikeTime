@@ -81,23 +81,48 @@
 </body>
 </html>
 <?php
- require 'vendor/autoload.php';
- use Ramsey\Uuid\Uuid;
- $bdd = new PDO('mysql:host=localhost;bdname=hiketime;', 'root', '');
- $uuid = Uuid::uuid4()->toString();
-    $nomtitulaireCarte = $_POST['name'];
-    $numCarte = $_POST['numero'];
-    $codeCarte = $_POST['code'];
-    
-    $sql = "INSERT INTO paiement (idPaiement, nomtitulaireCarte, numCarte, codeCarte) VALUES ('$uuid','$nomtitulaireCarte', '$numCarte', '$codeCarte'')";
-    
-    
-    
-    if ($bdd->query($sql) === TRUE) {
-        echo "Enregistrement de la randonnée réussi.";
-    } else {
-        echo "Erreur lors de l'enregistrement de la randonnée : " . $bdd->error;
-    }
+require 'vendor/autoload.php';
+use Ramsey\Uuid\Uuid as uuidpaiement; // Alias pour la classe Uuid
 
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=hiketime', 'root', '');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur : " . $e->getMessage());
+}
 
+// Fonction pour vérifier si un champ est vide
+function checkEmpty($field) {
+    return empty(trim($field));
+}
+
+// Récupérer les valeurs des champs du formulaire
+$uuidpaiement = uuidpaiement::uuid4()->toString(); // Utilisation de l'alias avec l'opération uuid4()
+
+$nomtitulaireCarte = $_POST['name'] ?? '';
+$numCarte = $_POST['numero'] ?? '';
+$codeCarte = $_POST['code'] ?? '';
+
+// Valider les champs requis
+$requiredFields = [
+    'name' => $nomtitulaireCarte,
+    'numero' => $numCarte,
+    'code' => $codeCarte,
+];
+
+try {
+    $sql = "INSERT INTO paiement (idPaiement, nomtitulaireCarte, numCarte, codeCarte)
+            VALUES (:uuid, :name, :numero, :code)";
+    $stmt = $bdd->prepare($sql);
+    $stmt->execute([
+        ':uuid' => $uuidpaiement,
+        ':name' => $nomtitulaireCarte,
+        ':numero' => $numCarte,
+        ':code' => $codeCarte,
+
+    ]);
+    echo "L'insertion a réussi.";
+} catch (PDOException $e) {
+    echo "Erreur lors de l'exécution de la requête : " . $e->getMessage();
+}
 ?>
