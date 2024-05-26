@@ -19,7 +19,6 @@ body {
 .rando{
     height: 60vh;
     width: 60%;
-    background-image:url(images/thala-guilef.webp) ;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 3%;
@@ -28,16 +27,27 @@ body {
     color:#fbffff;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     margin-top: 2%;
-    height: 70%;
+    height: 100%;
     font-weight: bold;
     padding-left: 2%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: space-evenly;
+    border-radius: 2vh;
+}
+.info-rand{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .presentation-rando span{
     padding-top: 2%;
 }
 .info-res{
+    margin-top: 7%;
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -70,7 +80,7 @@ body {
     position: fixed;
     z-index: 9999;
     height: 72vh;
-    width: 60vw;
+    width: 62vw;
     top: 9vh;
     left: 19vw;
 }
@@ -210,9 +220,6 @@ input[type='radio'] {
     width: 60%;
     display: flex;
     flex-direction: column;
-}
-.details span{
-    color: #000000;
 }
 .circuit{
     background-color: #000000;
