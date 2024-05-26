@@ -1,3 +1,25 @@
+<?php
+require 'vendor/autoload.php';
+use Ramsey\Uuid\Uuid;
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=hiketime', 'root', '');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur : " . $e->getMessage());
+}
+
+// Exécuter la requête pour récupérer la dernière randonnée
+try {
+    $sql = "SELECT * FROM randonnée ORDER BY idRand DESC LIMIT 1";
+    $stmt = $bdd->query($sql);
+    $derniereRand = $stmt->fetch(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Erreur lors de la récupération des données : " . $e->getMessage();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,20 +59,20 @@
         <!--intro rando-->
         <div class="rando-space">
          <div class="rando">
-            <div class="presentation-rando">
-                <h1>Thala Guilef</h1>
-                <span>07/06/2024</span>
-                <p> Partez à l'aventure à Thala Guilef pour une randonnée captivante.
-                    Entre paysages désertiques spectaculaires,formations rocheuses
-                    impressionnantes et faune sauvage fascinante, cette escapade vous
-                    transporte dans un monde à part.
-                </p>
-            </div>
-            <div class="info-res">
-                <p id="scrollToDetails">plus de details</p>
-                <p>1200da</p>
-                <button class="button" type="submit" onclick="openDeletePopup()">Reserver</button>
-                <div id="form-res">
+          <?php if (!empty($derniereRand)) { ?>
+            <div class="presentation-rando" style="background-image: url('uploads/<?php echo htmlspecialchars($derniereRand['photoPrincipale']); ?>');">
+                       <div class="info-rand">
+                        <h1><?php echo htmlspecialchars($derniereRand['nomRand']); ?></h1>
+                        <span><?php echo htmlspecialchars($derniereRand['dateRand']); ?></span>
+                        <p><?php echo htmlspecialchars($derniereRand['descRand']); ?></p>
+                        </div>
+                        <div class="info-res">
+                         <p id="scrollToDetails">plus de details</p>
+                         <p><?php echo htmlspecialchars($derniereRand['prixRand']); ?></p>
+                         <button class="button" type="submit" onclick="openDeletePopup()" >Reserver</button>
+                       </div>
+          </div>
+            <div id="form-res">
                   <!-- form a remplir-->
                     <form class="form" action="" method="post">
                  <!--elements form-->
@@ -91,32 +113,59 @@
                      </div>
                      
                        <div class="bouton">
-                        <button ><a href="paiement.html" >Continuer</a></button>
+                        <button id="continuerButton" ><a href="paiement.html" >Continuer</a></button >
                         <button type="reset">Effacer</button>
                         <button type="submit" onclick="closeDeletePopup()">Annuler</button>
                        </div>
                     </form>
                 </div>
-            </div>
+                    </div>
+                <?php } else { ?>
+                    <p>Aucune randonnée trouvée.</p>
+                <?php } ?>
+          
         </div> 
         </div>
         <!-- plus de details-->
         <div class="space " id="details"></div>
         <div class="plus-details" >
+         <?php if ($derniereRand): ?>
+                <div class="details">
+                    <h2>Date : <?php echo htmlspecialchars($derniereRand['dateRand']); ?></h2>
+                    <h2>Heure : <?php echo htmlspecialchars($derniereRand['heureRand']); ?></h2>
+                    <h2>Distance : <?php echo htmlspecialchars($derniereRand['distanceRand']); ?></h2>
+                    <h2>Lieu de départ : <?php echo htmlspecialchars($derniereRand['lieuDep']); ?></h2>
+                    <h2>Lieu d'arrivée : <?php echo htmlspecialchars($derniereRand['lieuArr']); ?></h2>
+                    <h2>Niveau de difficulté : <?php echo htmlspecialchars($derniereRand['nivDiff']); ?></h2>
+                    <h2>Âge minimum requis : <?php echo htmlspecialchars($derniereRand['ageminRand']); ?></h2>
+                    <h2>Âge maximum requis : <?php echo htmlspecialchars($derniereRand['agemaxRand']); ?></h2>
+                    <h2>Guide : <?php echo htmlspecialchars($derniereRand['nomGuide']) . ' ' . htmlspecialchars($derniereRand['prenomGuide']); ?></h2>
+                </div>
+             <?php else: ?>
+                <p>Aucune randonnée trouvée.</p>
+            <?php endif; ?>
+            <!--
           <div class="details">
-            <h2>Date : 07 juin 2024</h2>
-            <h2>Heure : 6h30 </h2> 
-            <h2>Distance : 7 km </h2> 
-            <h2>Lieu de depart : La Tour - Nouvelle Ville</h2>
-            <h2>Lieu d'arrivé : Thala Guilef</h2> 
-            <h2>Niveau de difficulté : 4</h2> 
-            <h2>Age minimum requis : 16</h2> 
-            <h2>Age maximum requis :65</h2>
-            <h2>Guide : BERCHICHE Ghiles</h2>
+            <h2>Date : </h2>
+            <h2>Heure :</h2> 
+            <h2>Distance :</h2> 
+            <h2>Lieu de depart :</h2>
+            <h2>Lieu d'arrivé :</h2> 
+            <h2>Niveau de difficulté :</h2> 
+            <h2>Age minimum requis :</h2> 
+            <h2>Age maximum requis :</h2>
+            <h2>Guide :</h2>
            </div>
-           <div class="circuit">
+           </div>
+            -->
+          <?php if ($derniereRand): ?>
+           <!--<div class="circuit">
              <img src="images/circuit-thalaguilef.webp" alt="">
-           </div>
+           </div>-->
+           <div class="circuit">
+            <img src="uploads/<?php echo htmlspecialchars($derniereRand['photoCircuit']); ?>" alt="Photo du circuit">
+            </div>
+           <?php endif; ?>
         </div>
         <div class="space "></div>
         <!-- slide photo -->
@@ -161,6 +210,7 @@
         </div>
         </div>
       
+            
         <footer class="footer">
             <div class="description">
                 <h1><img src="./images/logo.svg" id="footer-img"> <span>HikeTime</span></h1>
@@ -192,9 +242,45 @@
                         </div></li>
                 </li>
             </ul>
-        </footer>    
+        </footer> 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="randonnee.js"></script>
 </body>
 </html>
+<?php
+require 'vendor/autoload.php';
+use Ramsey\Uuid\Uuid as uuidavis;
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=hiketime', 'root', '');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur : " . $e->getMessage());
+}
+
+// Fonction pour vérifier si un champ est vide
+function checkEmpty($field) {
+    return empty(trim($field));
+}
+// Récupérer les valeurs des champs du formulaire
+$uuidavis = Uuid::uuid4()->toString();
+$contenuAvis = $_POST['opinion'] ?? '';
+// Valider les champs requis
+$requiredFields = [
+    'opinion' => $contenuAvis,
+];
+try {
+    $sql = "INSERT INTO avis (idAvis, contenuAvis)
+            VALUES (:uuid, :opinion)";
+    $stmt = $bdd->prepare($sql);
+    $stmt->execute([
+        ':uuid' => $uuidavis,
+        ':opinion' => $contenuAvis,
+    ]);
+    echo "L'insertion a réussi.";
+} 
+    catch (PDOException $e) {
+        echo "Erreur lors de l'exécution de la requête : " . $e->getMessage();
+    }
+?>
